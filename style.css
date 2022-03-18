@@ -1,0 +1,243 @@
+
+html,
+body{
+    margin: 0;
+    display: grid;
+}
+
+*{
+    box-sizing: border-box;
+}
+
+.maquetado{
+    display: grid;
+    gap: 8px;
+    grid-template-columns: 25% auto 25%;
+    grid-template-rows: auto auto auto auto;
+    grid-template-areas: 
+    "relleno relleno relleno"
+    "cerafina cerafina cerafina"
+    "aside main aside2"
+    "footer footer footer";
+}
+
+.relleno{
+    width: 100%;
+    height: 200px;
+    border: transparent;
+    grid-area: relleno;
+    display: flex;
+}
+
+.cerafina{
+    width: 100%;
+    height: 400px;
+    background-color:palegreen;
+    grid-area: cerafina;
+    display: grid;
+    grid-column: auto auto auto;
+    grid-template-areas: 
+    "foto foto2 foto3";
+}
+.cerafina > img:nth-child(1){
+    width: 400px;
+    height: 300px;
+    border-radius: 10px;
+    grid-area: foto;
+    justify-self: center;
+    align-self: center;
+}
+.cerafina > img:nth-child(2){
+    width: 400px;
+    height: 300px;
+    border-radius: 10px;
+    grid-area: foto2;
+    justify-self: center;
+    align-self: center;
+}
+.cerafina > img:nth-child(3){
+    width: 400px;
+    height: 300px;
+    border-radius: 10px;
+    grid-area: foto3;
+    justify-self: center;
+    align-self: center;
+}
+
+
+
+.boxTexto{
+    display: inline;
+    width: 200px;
+    height: 30px;
+    margin: 15px;
+    padding: 5px;
+    border-radius: 8px;
+    background-color: salmon;
+}
+
+.button{
+    width: 90px;
+    height: 30px;
+    border: transparent;
+    background-color: white;
+    border-radius: 10px;
+    justify-self: center;
+    align-self: center;
+}
+
+.centrar{
+    margin: 30px;
+    justify-content: center;
+    align-content: center;
+    justify-items: center;
+    align-items: center;
+}
+
+.diseñoBoxProductos{
+    background-color: thistle;
+    border: 10px solid;
+    border-color:thistle;
+    display: grid;
+    grid-template-columns: 60% 40%;
+    grid-template-rows: 50% 50%;
+    grid-template-areas: 
+    "imagen"
+    "imagen";
+}
+
+/* ----------------- edición del header------------------------- */
+.header{
+    width: 100%;
+    height: 200px;
+    background-color:khaki;
+    padding: 10px;
+    border: transparent;
+    position: fixed;
+    display: grid;
+    grid-template-columns: 40% auto 40%;
+    grid-template-rows: auto;
+    
+}
+
+.box{
+    width: 200px;
+    height: 180px;
+    border: transparent;
+    border-radius: 10px;
+    grid-column: 1;
+}
+
+.header > div >img:nth-child(1){
+    width: 100%;
+    height: 100%;
+    border-radius: inherit;
+}
+
+.header > div:nth-child(1){
+    justify-self: center;
+    align-self: center;
+}
+
+.header > div:nth-child(2){
+    justify-self: center;
+    align-self: center;
+}
+
+
+/* -------------------------------------------------------------- */
+
+/* -------------------edición del main--------------------------- */
+.main{
+    width: 100%;
+    height: 100%;
+    border: transparent;
+    grid-area: main;
+    display: grid;
+    grid-template-columns: auto ;
+    gap: 10px;
+}
+
+.main > div:nth-child(1){
+    grid-template-columns: auto auto;
+}
+
+.img{
+    justify-content: center;
+    align-content: center;
+    grid-area: imagen;
+    display: inline;
+}
+.img > *{
+    height: 300px;
+    width: 250px;
+    justify-self: center;
+    align-self: center;
+    border-radius: 8px;
+}
+
+/* --------------------------------------------------------------- */
+
+/*----------------------edición del aside--------------------------*/
+.aside{
+    width: 100%;
+    height: 60%;
+    padding: 20px;
+    justify-content: center;
+    align-content: center;
+    border: transparent;
+    grid-area: aside;
+    gap: 8px;
+}
+
+/*-------------------------------------------------------------------*/
+
+.aside2{
+    width: 100%;
+    height: 400px;
+    margin: -5px;
+    border: transparent;
+    border-radius: 10px;
+    background-color: lightskyblue;
+    grid-area: aside2;
+    display: flex;
+    flex-direction: column;
+}
+
+.aside2 > h2:nth-child(1) {
+    justify-self: center;
+    align-self: center;
+}
+
+.footer{
+    width: 100%;
+    height: 200px;
+    border: transparent;
+    background-color: aquamarine;
+    grid-area: footer;
+    display: grid;
+    grid-template-columns: auto auto auto;
+    grid-template-areas: 
+    "";
+}
+.footer > div:nth-child(1){
+    margin: 20px;
+    justify-self: center;
+    align-self:baseline;
+}
+.footer > div:nth-child(2){
+    justify-self: center;
+    align-self:baseline;
+}
+.footer > div:nth-child(3){
+    justify-self: center;
+    align-self:baseline;
+}
+
+.carrito{
+
+}
+
+
+
+
